@@ -1,5 +1,5 @@
 // Meta
-:project-name: <Projektthema (T00)>
+:project-name: <Vision Cocktailversand 2025>
 :project-system-name: <Projektname-System>
 // Settings:
 :toc:
