@@ -64,8 +64,8 @@ Beispiel:
 | der / die | [Cocktails online bestellen möchte und/oder individuell anpassen möchte]
 | Das Produkt / die Lösung ist ein | [Online Bestellsystem]
 | Die / Das | [die online Bestellung und Anpassung der Cocktails ermöglicht]
-| Im Gegensatz zu | [dem Cocktailverkauf vor Ort bietet]
-| Unser Produkt | [bequem die online Bestellung und flexible Anpassung nachhause]
+| Im Gegensatz zu | [SMS, Whatsapp oder per Telefon]
+| Unser Produkt | [ist übersichtlich, effizient und einfach]
 |===
 
 ////
