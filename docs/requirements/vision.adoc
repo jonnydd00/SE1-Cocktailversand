@@ -13,8 +13,30 @@ Der Zweck dieses Dokuments ist es, die wesentlichen Anforderungen an das System 
 
 === Gültigkeitsbereich (Scope)
 // Scope -> gehört diese Teilaufgabe zu meinem Produkt?
-Dieses Visions-Dokument bezieht sich auf das System {project-system-name}, das von <Team> entwickelt wird. Das System wird es <Zielkunde/Auftraggeber> erlauben, <Hauptfunktionen> zu nutzen, um damit <Vorteile> zu erreichen / <Aufgabe> zu erleichtern / <Problem> zu lösen.
+// Feature -> Merkmal
+Dieses Visions-Dokument bezieht sich auf das System {Cocktailversand}, das von <Team> entwickelt wird. Das System wird es <Privatpersonen> erlauben, <einen Online Versand> zu nutzen, um damit <einen höheren Umsatz> zu erreichen  <und Cocktails liefern zu können > zu erleichtern / <Problem> zu lösen.
 
+**Gehört dazu:**
+
+-Entwicklung eines Online-Shops.
+-Bestellprozess mit individueller Cocktailzusammenstellung
+-Unterstützung für verschiedene Zahlungsarten
+-Kundenmanagement und Bestellhistorie
+-Automatische Email-Versand
+-Zutatenliste
+-Bestellübersicht
+-Cocktailkonfigurator
+**Gehört nicht dazu:**
+
+-Entwicklung einer mobilen App
+- Organisation der Lieferung
+-Lagerverwaltung
+- Realisierung der Bezahlung
+-Tracking
+-Statistiken
+-Bezahlung könnte außerhalb des systems stattfinden
+-
+!!! Scoping typische Klausuraufgabe
 === Definitionen, Akronyme und Abkürzungen
 //Verweis passend zum Belegabgabe-Template se1_belegabgabe_t00.adoc
 Siehe <<#glossary, Glossar>>.
@@ -131,10 +153,17 @@ Hier können zudem bei Bedarf Teile des Unternehmensmodells (Prozesse, Organigra
 === Bedarfe und Hauptfunktionen
 //Vermeiden Sie Angaben zum Entwurf. Nennen wesentliche Features (Produktmerkmale) auf allgemeiner Ebene. Fokussieren Sie sich auf die benötigten Fähigkeiten des Systems und warum (nicht wie!) diese realisiert werden sollen. Geben Sie die von den Stakeholdern vorgegebenen Prioritäten und das geplante Release für die Veröffentlichung der Features an.
 
+
 [%header, cols="4,1,4,1"]
 |===
-| Bedarf | Priorität | Features | Geplantes Release
-| xx | xx | xx | xx
+| Bedarf                              | Priorität | Features                                                   | Geplantes Release
+
+| Darstellung der Cocktails           | Hoch      | Anzeige von Standardcocktails und Konfiguration individueller Cocktails | Release 1.0
+| Warenkorb und Bestellprozess        | Hoch      | Warenkorb, Mengenanpassung, Bestellübersicht, Abschluss des Bestellprozesses | Release 1.0
+| Zahlungsmöglichkeiten               | Hoch      | Integration verschiedener Zahlungsarten und Bestätigung per E-Mail | Release 1.0
+| Kundenverwaltung                    | Mittel    | Benutzerkonten mit Bestellhistorie und Stornierungsoption | Release 1.1
+| Marketing und Rabattsystem          | Mittel    | Versand von personalisierten Angeboten und Rabatten für Stammkunden | Release 1.2
+| Sperrung nicht-zahlender Kunden     | Niedrig   | Möglichkeit zur Sperrung und Verwaltung von Zahlungsstatus | Release 1.3
 |===
 
 
@@ -148,8 +177,36 @@ Hinweise:
 . Definieren Sie alle Dokumentationsanforderugen, inkl. Benutzerhandbücher, Onlinehilfe, Installations-, Kennzeichnungs- und Auslieferungsanforderungen-
 . Definieren Sie die Priorität für diese zusätzlichen Produktanforderungen. Ergänzen Sie, falls sinnvoll, Angaben zu Stabilität, Nutzen, Aufwand und Risiko für diese Anforderungen.
 
+
 [%header, cols="4,1,1"]
 |===
-| Anforderung | Priorität | Geplantes Release
-| xx | xx | xx
+| Anforderung                                       | Priorität | Geplantes Release
+
+| **Technische Anforderungen:**  
+  - Der Shop soll als Webseite laufen, die auf Smartphones, Tablets und PCs funktioniert.  
+  - Er nutzt **Vue.js** (für das Design) und **Java** (für die Funktionen).  
+  - Daten werden in einer **PostgreSQL-Datenbank** gespeichert.  
+  - Die Webseite soll mit Browsern wie Chrome, Firefox und Edge funktionieren.  
+  - Datenschutzregeln (z. B. DSGVO) müssen eingehalten werden. | Hoch      | Release 1.0
+
+| **Leistung:**  
+  - Der Shop muss 100 Nutzer gleichzeitig bedienen können.  
+  - Jede Aktion soll in weniger als 2 Sekunden reagieren. | Mittel    | Release 1.1
+
+| **Qualität:**  
+  - **Zuverlässigkeit:** Der Shop soll stabil laufen und keine Fehler zeigen, wenn Kunden falsche Eingaben machen.  
+  - **Sicherheit:** Daten bleiben sicher, auch wenn ein Teil des Systems ausfällt.  
+  - **Einfach zu nutzen:** Die Webseite soll verständlich und benutzerfreundlich sein. | Hoch      | Release 1.0
+
+| **Einschränkungen:**  
+  - Es wird nur eine Webseite entwickelt, keine extra App.  
+  - Der Barbesitzer kümmert sich selbst um den Versand der Cocktails.  
+  - Der Server wird auf vorhandener Hardware laufen. | Mittel    | Release 1.0
+
+| **Dokumentation:**  
+  - Es soll eine einfache Anleitung für die Kunden geben (als PDF und online).  
+  - Eine Anleitung für das Technik-Team, wie man den Shop installiert und verwaltet.  
+  - Hinweis auf die Einhaltung der Datenschutzregeln. | Niedrig   | Release 1.2
+
 |===
+
