@@ -56,7 +56,7 @@ Der Betreiber einer Bar möchte sein Geschäftsfeld erweitern indem er über ein
 
 [cols="1,3"]
 |===
-| Das Problem | [Fehlender Online Versandhandel]
+| Das Problem | Fehlender Online Versandhandel
 | betrifft | [Betreiber, Mitarbeiter, Gesetzgeber, Kunden:Privatperson]
 | die Auswirkung davon ist | [örtlich begrenzter Vertrieb ]
 | eine erfolgreiche Lösung wäre | -Privatpersonen können bequem zuhause Cocktails genießen.
