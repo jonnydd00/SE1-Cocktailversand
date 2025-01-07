@@ -18,14 +18,15 @@ Dieses Visions-Dokument bezieht sich auf das System {Cocktailversand}, das von <
 
 **Gehört dazu:**
 
--Entwicklung eines Online-Shops.
--Bestellprozess mit individueller Cocktailzusammenstellung
--Unterstützung für verschiedene Zahlungsarten
--Kundenmanagement und Bestellhistorie
--Automatische Email-Versand
--Zutatenliste
--Bestellübersicht
--Cocktailkonfigurator
+- Entwicklung eines Online-Shops.
+- Bestellprozess mit individueller Cocktailzusammenstellung
+- Unterstützung für verschiedene Zahlungsarten
+- Kundenmanagement und Bestellhistorie
+- Automatische Email-Versand
+- Zutatenliste
+- Bestellübersicht
+- Cocktailkonfigurator
+
 **Gehört nicht dazu:**
 
 -Entwicklung einer mobilen App
