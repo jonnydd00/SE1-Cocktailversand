@@ -7,20 +7,15 @@ class Kunde {
   + Telefonnummer
   + Sperrstatus
   + Rabattstatus
-  --
-  + Bestellung erstellen()
-  + Bestellhistorie abrufen()
-  + Rabatt anwenden()
+
 }
 
 class Barbetreiber {
   + Betreiber-ID
   + Name
   + E-Mail
-  --
-  + Cocktails verwalten()
-  + Zutaten aktualisieren()
-  + Marketing-Kampagnen erstellen()
+  
+
 }
 
 class Cocktail {
@@ -29,19 +24,16 @@ class Cocktail {
   + Preis
   + Beschreibung
   + Kategorie
-  --
-  + Preis berechnen()
-  + Details anzeigen()
-}
+  }
+  
 
 class Zutat {
   + Zutaten-ID
   + Name
   + Kategorie
   + Preis pro Einheit
-  --
-  + Verfügbarkeit prüfen()
-  + Preis zurückgeben()
+  
+ 
 }
 
 class Bestellung {
@@ -50,37 +42,29 @@ class Bestellung {
   + Lieferadresse
   + Gesamtpreis
   + Bestellstatus
-  --
-  + Artikel hinzufügen()
-  + Artikel entfernen()
-  + Bestellung anzeigen()
-  + Bestellung abschließen()
-  + Bestellung stornieren()
+ 
 }
 
 class Bezahlung {
   + Zahlungs-ID
   + Zahlungsmethode
   + Zahlungsstatus
-  --
-  + Zahlung verarbeiten()
-  + Zahlungsstatus prüfen()
-}
+  }
+  
 
-class Marketing {
+class Werbung {
   + Betreff
   + Inhalt
   + Empfänger
-  --
-  + Email senden()
+  
 }
 
 Kunde "1" -- "N" Bestellung
 Bestellung "N" -- "M" Cocktail
 Cocktail "N" -- "M" Zutat
 Bestellung "1" -- "1" Bezahlung
-Marketing "N" -- "1" Kunde
+Werbung "N" -- "1" Kunde
 Barbetreiber "1" -- "N" Cocktail : "verwaltet"
 Barbetreiber "1" -- "N" Zutat : "aktualisiert"
-Barbetreiber "1" -- "N" Marketing : "erstellt Kampagnen"
+Barbetreiber "1" -- "N" Werbung : "erstellt Kampagnen"
 @enduml
