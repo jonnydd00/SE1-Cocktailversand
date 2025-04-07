@@ -1,0 +1,60 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class UGV {
+  - id
+  - modell
+  - aktuellePositionX
+  - aktuellePositionY
+  - batteriestatus
+  - ladungskapazitaet
+  - status
+  --
+  + leistungsdaten
+  + aktuelleAufgaben
+}
+
+class Aufgabe {
+  - id
+  - beschreibung
+  - status
+  --
+  + routen
+  + zugewiesenesUGV
+}
+
+class Route {
+  - id
+  - name
+  --
+  + wegpunkte
+}
+
+class Wegpunkt {
+  - positionX
+  - positionY
+  - reihenfolge
+}
+
+
+class Benutzer {
+  - benutzername
+  - passwortHash
+  --
+  + rolle
+}
+
+enum Rolle {
+  ADMIN
+  DISPATCHER
+  TECHNIKER
+}
+
+
+UGV "1" --> "0..*" Aufgabe
+Aufgabe "1" --> "1..*" Route
+Route "1" *-- "1..*" Wegpunkt
+Aufgabe --> UGV : zugewiesenesUGV
+Benutzer --> Rolle
+
+@enduml
